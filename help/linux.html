@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dromi per Linux</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <style>
 body {
@@ -52,7 +53,7 @@ p {
 }
 
 /* CODICE */
-.code {
+ pre, code {
   background: #1b5e20;
   color: #c8e6c9;
   padding: 15px;
@@ -88,48 +89,21 @@ p {
 
 <!-- CONTENUTO -->
 <div class="container">
-  <div class="box">
+  <div class="box" id="content"></div>
 
-    <h1>Dromi per Linux</h1>
-
-    <p>
-      <b>Dromi per Linux</b> è la versione per Linux di Dromi.
-    </p>
-
-    <p>
-      Puoi usare Dromi per creare programmi, testare idee e imparare
-      come funzionano i linguaggi di programmazione, anche su Linux!
-    </p>
-
-    <h2 style="color:#2e7d32;">Come la scarico?</h2>
-    <p>Clicca il tasto qui Sotto per scaricarla:</p>
-    <a href="https://github.com/DeMENIGECO/Dromi/raw/main/dromi-linux/dromi-linux.tar.gz" class="back">Scarica!</a>
-    
-    <h2 style="color:#2e7d32;">Perchè non ci sono le librerie preinstallate?</h2>
-    <p>
-      Perchè la build è automatica e non contiene le librerie preinstallate.
-      Puoi leggere come intallarle nel file README.txt in dromi-linux/notes maggiori informazioni (<a href="https://github.com/DeMENIGECO/Dromi/blob/main/dromi-linux/notes/README.txt" class="back">Clicca qui</a>)
-    </p>
-
-    <h2 style="color:#2e7d32;">Dove sono le cartelle come mdl, pip_installed o opt?</h2>
-    <p>
-      Semplicemente non sono nel pacchetto. Puoi scaricarle dalla repository manulamente.
-    </p>
-
-    <h2 style="color:#2e7d32;">Ci sono altre cose da leggere prima dell'utilizzo?</h2>
-    <p>
-      Sì. Puoi leggerle nel file README.txt in dromi-linux/notes maggiori informazioni (<a href="https://github.com/DeMENIGECO/Dromi/blob/main/dromi-linux/notes/README.txt" class="back">Clicca qui</a>)
-    </p>
-
-    <h2 style="color:#FF0000;">Nota importante!</h2>
-    <p>Scarica tutto il contenuto della cartella notes nella cartella di estrazione di Dromi per eviatre problemi legali e di altro tipo. (Link cartella: <a href="https://github.com/DeMENIGECO/Dromi/tree/main/dromi-linux/notes" class="back">Clicca qui</a>)</p>
-
-    
-
+  <div style="text-align:center;">
     <a href="index.html" class="back">⬅ Torna alla Home</a>
-
   </div>
 </div>
 
 </body>
+
+<script>
+fetch("md/linux.md")
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById("content").innerHTML = marked.parse(text);
+  });
+</script>
 </html>
+

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cos'è Dromi?</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <style>
 body {
@@ -52,7 +53,7 @@ p {
 }
 
 /* CODICE */
-.code {
+ pre, code {
   background: #1b5e20;
   color: #c8e6c9;
   padding: 15px;
@@ -88,42 +89,20 @@ p {
 
 <!-- CONTENUTO -->
 <div class="container">
-  <div class="box">
+  <div class="box" id="content"></div>
 
-    <h1>Cos'è Dromi?</h1>
-
-    <p>
-      <b>Dromi</b> è un linguaggio di programmazione creato da me.
-      È pensato per essere semplice, veloce e facile da usare.
-    </p>
-
-    <p>
-      Puoi usare Dromi per creare programmi, testare idee e imparare
-      come funzionano i linguaggi di programmazione.
-    </p>
-
-    <h2 style="color:#2e7d32;">Esempio</h2>
-
-    <div class="code">
-print("Ciao mondo!")
-    </div>
-
-    <p>
-      Questo comando mostra del testo sullo schermo.
-    </p>
-
-    <h2 style="color:#2e7d32;">Perché usare Dromi?</h2>
-
-    <ul style="color:#444;">
-      <li>Semplice da imparare</li>
-      <li>Creato da me</li>
-      <li>Perfetto per fare esperimenti</li>
-    </ul>
-
+  <div style="text-align:center;">
     <a href="index.html" class="back">⬅ Torna alla Home</a>
-
   </div>
 </div>
 
 </body>
+
+<script>
+fetch("md/what-is.md")
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById("content").innerHTML = marked.parse(text);
+  });
+</script>
 </html>
