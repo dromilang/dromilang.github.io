@@ -16,4 +16,4 @@ Quando crei una segnalazione, cerca di includere:
 - Il codice che hai scritto
 - L'errore che appare
 
-[Vai alle Issue su GitHub](https://github.com/DeMENIGECO/Dromi/issues)
+[Vai alle Issue su GitHub](https://github.com/dromilang/Dromi/issues)
