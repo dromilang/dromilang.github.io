@@ -44,10 +44,4 @@ Nuove funzionalità e miglioramenti vengono aggiunti frequentemente.
 
 ---
 
-## 📫 Contatti
-- GitHub: https://github.com/DeMENIGECO  
-- Sito: https://demenigeco.github.io  
-
----
-
 ⭐ Se ti piace questo progetto, lascia una stella!
