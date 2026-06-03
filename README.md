@@ -1,7 +1,7 @@
 # 🌐 Sito web di Dromi
 
 🚀 Link ufficiale:  
-👉 [https://demenigeco.github.io/dromilang](https://demenigeco.github.io/dromilang)
+👉 https://dromilang.github.io/
 
 ---
 
