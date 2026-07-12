@@ -1,0 +1,83 @@
+name: 💥 Segnalazione Crash
+description: Segnala un crash o blocco del sito Dromi
+title: "[CRASH SITO] "
+labels:
+  - crash
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un crash del sito Dromi!
+        Fornisci più dettagli possibile per aiutarci a trovare la causa.
+
+  - type: input
+    id: page
+    attributes:
+      label: Pagina dove è avvenuto il crash
+      description: In quale pagina il sito si è bloccato?
+      placeholder: "es. index.html, help/issue.html"
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash-description
+    attributes:
+      label: Descrizione del crash
+      description: Cosa è successo quando il sito è crashato?
+      placeholder: "Il sito si è bloccato quando..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Passaggi per riprodurre il crash
+      description: Inserisci i passaggi che causano il problema.
+      placeholder: |
+        1. Apro...
+        2. Clicco...
+        3. Il sito si blocca...
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Messaggio di errore
+      description: Copia eventuali errori mostrati dal browser.
+      placeholder: "Console error, schermata bianca, errore..."
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Errore console JavaScript
+      description: Se disponibile, inserisci l'errore della console del browser.
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser utilizzato
+      description: Quale browser ha avuto il crash?
+      placeholder: "Chrome, Firefox, Edge..."
+
+  - type: input
+    id: device
+    attributes:
+      label: Dispositivo
+      description: Su quale dispositivo è successo?
+      placeholder: "PC, Android, iPhone..."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshot o video
+      description: Aggiungi immagini o registrazioni del crash.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Conferme
+      options:
+        - label: Ho controllato che il crash non sia già stato segnalato
+          required: true
+        - label: Ho inserito tutti i dettagli disponibili
+          required: true
