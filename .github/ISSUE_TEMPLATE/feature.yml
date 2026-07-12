@@ -1,0 +1,67 @@
+name: ✨ Richiesta nuova funzionalità
+description: Proponi una nuova funzione o un miglioramento per il sito Dromi
+title: "[FEATURE SITO] "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver proposto una nuova funzionalità per il sito Dromi!
+        Spiega la tua idea nel modo più dettagliato possibile.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Descrizione della funzionalità
+      description: Descrivi la tua idea.
+      placeholder: "Vorrei aggiungere..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Perché è utile?
+      description: Spiega perché questa funzionalità migliorerebbe il sito.
+      placeholder: "Sarebbe utile perché..."
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      description: A quale parte del sito si riferisce?
+      options:
+        - Home page
+        - Dromi Help
+        - Documentazione
+        - Design grafico
+        - Navigazione
+        - Accessibilità
+        - Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Possibile soluzione
+      description: Hai già un'idea di come realizzarla?
+      placeholder: "Si potrebbe fare così..."
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Esempi o riferimenti
+      description: Inserisci esempi, immagini o siti simili.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Conferme
+      options:
+        - label: Ho controllato che questa idea non sia già stata proposta
+          required: true
+        - label: La proposta riguarda il sito Dromi
+          required: true
