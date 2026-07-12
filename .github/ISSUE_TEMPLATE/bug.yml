@@ -1,0 +1,76 @@
+name: 🐛 Segnala un problema al sito
+description: Segnala un bug o un problema del sito ufficiale di Dromi
+title: "[BUG SITO] "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un problema nel sito di Dromi!
+        Aiutaci a migliorarlo fornendo più dettagli possibile.
+
+  - type: input
+    id: page
+    attributes:
+      label: Pagina interessata
+      description: In quale pagina del sito hai trovato il problema?
+      placeholder: "es. index.html, help/what-is.html"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Descrizione del problema
+      description: Spiega cosa non funziona nel sito.
+      placeholder: "Il problema è..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Come riprodurre il problema
+      description: Scrivi i passaggi per vedere il bug.
+      placeholder: |
+        1. Apro la pagina...
+        2. Clicco su...
+        3. Succede...
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento previsto
+      description: Cosa dovrebbe succedere normalmente?
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Inserisci immagini se possono aiutare a capire il problema.
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      description: Quale browser hai utilizzato?
+      placeholder: "Chrome, Firefox, Edge, Safari..."
+
+  - type: input
+    id: device
+    attributes:
+      label: Dispositivo
+      description: Da quale dispositivo hai visitato il sito?
+      placeholder: "PC, tablet, smartphone..."
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Conferme
+      options:
+        - label: Ho controllato che il problema non sia già stato segnalato
+          required: true
+        - label: Ho inserito informazioni utili per risolvere il problema
+          required: true
