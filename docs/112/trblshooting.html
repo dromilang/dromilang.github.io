@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dromi Docs: Troubleshooting</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #e8f5e9;
+}
+
+/* TOP BAR */
+.topbar {
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* CONTENUTO */
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  color: #2e7d32;
+}
+
+/* BOX */
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* CODICE INLINE */
+code {
+  background: #f0f0f0;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-family: Consolas, monospace;
+}
+
+/* LINK */
+a {
+  color: #2e7d32;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="logo">Dromi Docs: 1.1.2</div>
+  <div class="hamburger" onclick="window.location.href = '../'">
+    ⬅ Torna alla home dei Docs
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Risoluzione dei problemi</h1>
+    <p>Problemi comuni e come risolverli 👇</p>
+  </div>
+
+  <div class="box">
+    <h2>dromi.exe non funziona</h2>
+    <p>
+      Prova a usare <code>dromi</code> oppure una versione specifica come <code>dromi123</code>.
+    </p>
+    <p>
+      Se non funziona nulla, reinstalla Dromi seguendo bene le istruzioni.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Non riesco a eseguire gli script</h2>
+    <p>
+      Assicurati di essere nella cartella giusta nel terminale.
+    </p>
+    <p>
+      Devi eseguire il comando dove si trova il file <code>.dr</code>.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Eseguo lo script ma non succede nulla</h2>
+    <p>
+      Probabilmente non hai salvato il file.
+    </p>
+    <p>
+      Premi <b>CTRL + S</b> e riprova.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Errore durante l'esecuzione</h2>
+    <p>
+      Controlla il codice: potrebbe esserci un errore di sintassi.
+    </p>
+    <p>
+      Se non riesci a risolvere, cerca l'errore online o chiedi aiuto.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Non funzionano i moduli</h2>
+    <p>
+      Assicurati di importarli correttamente.
+    </p>
+    <p>
+      Se hai usato:
+      <code>dromi.exe --mdl pip install nome_modulo</code>
+    </p>
+    <p>
+      allora devi scrivere:
+      <code>from mdl import nome_modulo</code>
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Supporto</h2>
+    <p>
+      Hai ancora problemi?
+      Vai alla wiki ufficiale:
+    </p>
+    <p>
+      <a href="https://github.com/DeMENIGECO/Dromi/wiki">Apri la wiki</a>
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

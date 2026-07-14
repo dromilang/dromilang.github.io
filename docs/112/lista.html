@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dromi Docs: Lista della Spesa</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #e8f5e9;
+}
+
+/* TOP BAR */
+.topbar {
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* CONTENUTO */
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  color: #2e7d32;
+}
+
+/* BOX */
+.box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* CODICE */
+pre {
+  background: #1e1e1e;
+  color: #00ff88;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* TESTO */
+.box p {
+  line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="logo">Dromi Docs: 1.1.2</div>
+  <div class="hamburger" onclick="window.location.href = '../'">
+    ⬅ Torna alla home dei Docs
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Lista della Spesa</h1>
+    <p>Creiamo una semplice app per aggiungere elementi alla lista 👇</p>
+  </div>
+
+  <div class="box">
+    <h2>1️⃣ Codice</h2>
+
+<pre>
+set_window_title("Lista della Spesa Dromi")
+set_window_size(600, 700)
+
+h1("La Mia Lista della Spesa")
+
+input_spesa = inputer()
+
+def aggiungi(elemento):
+    p(elemento)
+    update()
+
+button("Aggiungi", lambda: aggiungi(input_spesa))
+
+dr.init()
+</pre>
+
+    <p>
+      Questo codice crea un campo di input e un bottone.  
+      Quando clicchi "Aggiungi", il testo viene mostrato nella lista.
+    </p>
+
+  </div>
+
+  <div class="box">
+    <h2>2️⃣ Salva il file</h2>
+    <p>
+      Salva il codice in un file chiamato:
+      <b>lista.dr</b>
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>3️⃣ Esegui lo script</h2>
+    <p>
+      Apri il terminale nella cartella del file e scrivi:
+    </p>
+
+<pre>
+dromi.exe lista.dr
+</pre>
+
+    <p>
+      🎉 Ora puoi aggiungere elementi alla tua lista della spesa!
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
